@@ -10,13 +10,26 @@ body {
   color: #fff;
   min-height: 100vh;
   padding-left: 60px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 h1,
 h2 {
   margin-bottom: 14px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .navbar {
@@ -112,7 +125,13 @@ h2 {
 }
 
 #homeSection .section-content.right {
-  background-image: url('https://i.ytimg.com/vi/AEMgNMNeBr4/maxresdefault.jpg');
+  background-image: url("img/home-background2.jpg");
+  background-size: contain;
+}
+
+#contactSection .section-content.right {
+  background-image: url("img/astronaut-rendered.png");
+  background-size: contain;
 }
 
 #projectsSection .section-content.right {
