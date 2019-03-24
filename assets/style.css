@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding-left: 60px;
+  font-family: 'Montserrat';
+}
+
+h1,
+h2 {
+  margin-bottom: 14px;
+  font-family: 'Roboto';
+}
+
+.navbar {
+  height: 100vh;
+  width: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  overflow: auto;
+  background-color: #000;
+}
+
+.nav-items {
+  list-style: none;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item a {
+  height: 60px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+
+.nav-item a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.section-container {
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 100vh;
+}
+
+.section-content {
+  flex-basis: 400px;
+  flex-grow: 1;
+  padding: 20px;
+  height: 100%;
+}
+
+.section-content.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content.right {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 20px 0 35px -7px rgba(0, 0, 0, 0.4);
+}
+
+.section-content .content-box {
+  width: 80%;
+  max-width: 600px;
+}
+
+#meSection .section-content.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#meSection .section-content.right .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  max-width: 400px;
+}
+
+.skill-bubble {
+  margin: 14px;
+  padding: 14px 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+}
+
+#homeSection .section-content.right {
+  background-image: url('https://i.ytimg.com/vi/AEMgNMNeBr4/maxresdefault.jpg');
+}
+
+#projectsSection .section-content.right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.project-box {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-box:hover .bg-container {
+  transform: scale(1.2);
+}
+
+.project-box .bg-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in;
+  z-index: -1;
+}
+
+.project-box .project-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in;
+  opacity: 0;
+}
+
+.project-box:hover .project-content {
+  opacity: 1;
+}
+
+.project-box:hover .project-content .project-link {
+  transform: translateY(0);
+}
+
+.project-box .project-content h4 {
+  margin: 6px 0 12px 0;
+  font-size: 18.5px;
+}
+
+.project-box .project-content .project-link {
+  text-decoration: none;
+  padding: 11px 18px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-size: 12.5px;
+  transition: all 0.2s ease-in;
+  transform: translateY(20px);
+}
+
+.project-box .project-content .project-link:hover {
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    padding-left: initial;
+    padding-top: 60px;
+  }
+
+  .navbar {
+    height: 60px;
+    width: 100vw;
+    flex-flow: row nowrap;
+  }
+
+  .nav-items {
+    width: initial;
+    height: 100%;
+    margin: 0;
+    margin-left: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .nav-item {
+    width: initial;
+    height: 100%;
+  }
+
+  .nav-item a {
+    width: 60px;
+  }
+
+  .section-content.right {
+    max-height: 50%;
+  }
+
+  .section-container + .section-container .section-content.left {
+    max-height: 50%;
+  }
+}
